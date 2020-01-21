@@ -7,11 +7,11 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AssetsListComponent {
-  @Input() list: { id: number; name: string; pic: string; desc: string; related: [] }[];
+  @Input() list: { id: number; name: string; pic: string; related: [] }[];
   @Input() IQEAfn: () => number;
   @Input() displayRelated: boolean;
 
-  diplayedRelated: { [key: string]: boolean } = {};
+  diplayedRelated: { [key: number]: boolean } = {};
 
   toggleDisplayedRelatedItems(id: number) {
     if (!this.displayRelated) {
