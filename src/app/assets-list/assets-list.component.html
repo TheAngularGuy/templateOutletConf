@@ -1,0 +1,20 @@
+<ul class="asset-list">
+  <li class="asset" *ngFor="let item of list" (click)="toggleDisplayedRelatedItems(item.id)">
+    <div class="flex-row">
+      <img [src]="item.pic" alt="asset image" height="68" />
+
+      <span>{{ item.name }} {{ item.id }}</span>
+
+      <span *ngIf="IQEAfn"> IQEA: {{ IQEAfn(item.id) }} </span>
+    </div>
+
+    <ng-container *ngIf="diplayedRelated[item.id]">
+      <p>Related assets:</p>
+      <ul class="related-list">
+        <li class="related" *ngFor="let related of item.related">
+          {{ related }}
+        </li>
+      </ul>
+    </ng-container>
+  </li>
+</ul>
