@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-assets-list',
@@ -8,15 +8,5 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class AssetsListComponent {
   @Input() list: { id: number; name: string; pic: string; desc: string; related: [] }[];
-  @Input() IQEAfn: () => number;
-  @Input() displayRelated: boolean;
-
-  diplayedRelated: { [key: string]: boolean } = {};
-
-  toggleDisplayedRelatedItems(id: number) {
-    if (!this.displayRelated) {
-      return;
-    }
-    this.diplayedRelated[id] = !this.diplayedRelated[id];
-  }
+  @Input() ItemTemplate: TemplateRef<HTMLElement>;
 }

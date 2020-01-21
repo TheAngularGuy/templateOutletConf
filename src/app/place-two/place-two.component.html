@@ -1,1 +1,17 @@
-<app-assets-list [list]="assets" [displayRelated]="true"></app-assets-list>
+<app-assets-list [list]="assets" [ItemTemplate]="customItemTemplate">
+  <ng-template #customItemTemplate let-item>
+    <div class="flex-row" (click)="toggleDisplayedRelatedItems(item.id)">
+      <img [src]="item.pic" alt="asset image" height="68" />
+      <span>{{ item.name }} {{ item.id }}</span>
+    </div>
+
+    <ng-container *ngIf="hash[item.id]">
+      <p>Related assets:</p>
+      <ul class="related-list">
+        <li class="related" *ngFor="let related of item.related">
+          {{ related }}
+        </li>
+      </ul>
+    </ng-container>
+  </ng-template>
+</app-assets-list>
