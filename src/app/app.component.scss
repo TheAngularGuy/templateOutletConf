@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+
+  .place {
+    width: 100%;
+    padding: 0.5ch;
+
+    &:nth-child(1) {
+      border-right: 1px solid orangered;
+    }
+    &:not(:nth-child(1)) {
+      border-left: 1px solid orangered;
+    }
+  }
+}

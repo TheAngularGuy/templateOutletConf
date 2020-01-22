@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ASSET } from '../constants/assets.constant';
+import { ASSETS } from '../../constants/assets.constant';
 
 @Component({
   selector: 'app-place-one',
@@ -8,7 +8,7 @@ import { ASSET } from '../constants/assets.constant';
   styleUrls: ['./place-one.component.scss'],
 })
 export class PlaceOneComponent {
-  assets = ASSET;
+  assets = ASSETS;
 
   calculus(x: number) {
     return (x * x) / 1.0001;

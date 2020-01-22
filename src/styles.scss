@@ -4,3 +4,22 @@ body {
   margin: 0;
   padding: 0;
 }
+
+div.flex-row {
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 68px;
+  }
+
+  span {
+    display: inline-block;
+    margin: 0 1.8ch;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

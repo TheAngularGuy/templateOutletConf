@@ -1,4 +1,4 @@
-export const ASSET = [
+export const ASSETS = [
   {
     id: 1,
     name: 'asset',

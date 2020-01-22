@@ -1,13 +1,13 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Asset } from 'src/app/models/asset.model';
 
 @Component({
   selector: 'app-assets-list',
   templateUrl: './assets-list.component.html',
   styleUrls: ['./assets-list.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AssetsListComponent {
-  @Input() list: { id: number; name: string; pic: string; related: [] }[];
+  @Input() list: Asset[];
   @Input() IQEAfn: () => number;
   @Input() displayRelated: boolean;
 

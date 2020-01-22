@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ASSET } from '../constants/assets.constant';
+import { ASSETS } from '../../constants/assets.constant';
 
 @Component({
   selector: 'app-place-two',
@@ -8,5 +8,5 @@ import { ASSET } from '../constants/assets.constant';
   styleUrls: ['./place-two.component.scss'],
 })
 export class PlaceTwoComponent {
-  assets = ASSET;
+  assets = ASSETS;
 }
